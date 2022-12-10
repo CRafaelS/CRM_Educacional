@@ -16,15 +16,13 @@ public class CrmEducacionalContext : DbContext
                 Database=crm_educacional_db;
                 User=SA;
                 Password=Password12!;
+                TrustServerCertificate=true
             ");
         }
     }
 
     protected override void OnModelCreating(ModelBuilder mb)
-    {
-        mb.Entity<Matricula>()
-            .HasKey(m => new { m.CandidatoId, m.CursoId });
-        
+    {   
         mb.Entity<Matricula>()
             .HasOne(m => m.Candidato)
             .WithMany(c => c.Matriculas)
