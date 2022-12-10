@@ -8,37 +8,37 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = educacional
 build_property.RootNamespace = educacional
-build_property.ProjectDir = /home/c_rafael/CRM/CRM_Educacional/educacional/
+build_property.ProjectDir = /home/c_rafael/CRM/CRM_Educacional/src/
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /home/c_rafael/CRM/CRM_Educacional/educacional
+build_property.MSBuildProjectDirectory = /home/c_rafael/CRM/CRM_Educacional/src
 build_property._RazorSourceGeneratorDebug = 
 
-[/home/c_rafael/CRM/CRM_Educacional/educacional/Views/Home/Index.cshtml]
+[/home/c_rafael/CRM/CRM_Educacional/src/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/c_rafael/CRM/CRM_Educacional/educacional/Views/Home/Privacy.cshtml]
+[/home/c_rafael/CRM/CRM_Educacional/src/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/c_rafael/CRM/CRM_Educacional/educacional/Views/Shared/Error.cshtml]
+[/home/c_rafael/CRM/CRM_Educacional/src/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/c_rafael/CRM/CRM_Educacional/educacional/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/home/c_rafael/CRM/CRM_Educacional/src/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/c_rafael/CRM/CRM_Educacional/educacional/Views/_ViewImports.cshtml]
+[/home/c_rafael/CRM/CRM_Educacional/src/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/c_rafael/CRM/CRM_Educacional/educacional/Views/_ViewStart.cshtml]
+[/home/c_rafael/CRM/CRM_Educacional/src/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/c_rafael/CRM/CRM_Educacional/educacional/Views/Shared/_Layout.cshtml]
+[/home/c_rafael/CRM/CRM_Educacional/src/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-n8qd38b4xt
