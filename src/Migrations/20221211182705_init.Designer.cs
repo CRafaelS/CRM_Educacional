@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace educacional.Migrations
 {
     [DbContext(typeof(CrmEducacionalContext))]
-    [Migration("20221210062224_init")]
+    [Migration("20221211182705_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -76,9 +76,8 @@ namespace educacional.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Preco")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<decimal>("Preco")
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("CursoId");
 

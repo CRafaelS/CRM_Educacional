@@ -11,39 +11,23 @@ public class CandidatoRepository
         _context = context;
     }
 
-    public Candidato addCandidato(Candidato candidato)
+    public Candidato criarCandidato(Candidato candidato)
     {
-        var novoCandidato = new Candidato
+        _context.Candidatos.Add(candidato);
+        _context.SaveChanges();
+
+        return new Candidato
         {
+            CandidatoId = candidato.CandidatoId,
             Nome = candidato.Nome,
             Email = candidato.Email,
             CPF = candidato.CPF,
             Telefone = candidato.Telefone,
         };
-        _context.Candidatos.Add(candidato);
-        _context.SaveChanges();
-
-        return _context.Candidatos
-                .Where(b => b.CandidatoId == novoCandidato.CandidatoId)
-                .Select(x => new Candidato
-                {
-                    CandidatoId = x.CandidatoId,
-                    Nome = x.Nome,
-                    Email = x.Email,
-                    CPF = x.CPF,
-                    Telefone = x.Telefone,
-                }).First();
     }
 
-     public IEnumerable<Candidato> pegarCandidatos()
-        {
-            return _context.Candidatos
-                .Select(x => new Candidato{
-                     CandidatoId = x.CandidatoId,
-                    Nome = x.Nome,
-                    Email = x.Email,
-                    CPF = x.CPF,
-                    Telefone = x.Telefone,
-                });
-        }
+    public IEnumerable<Candidato> pegarCandidatos()
+    {
+        return _context.Candidatos.ToList();
+    }
 }
