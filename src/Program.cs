@@ -1,7 +1,18 @@
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<CrmEducacionalContext>(options =>
+    options.UseSqlServer(@"
+                Server=127.0.0.1;
+                Database=crm_educacional_db;
+                User=SA;
+                Password=Password12!;
+                TrustServerCertificate=true;
+            "));
 
 var app = builder.Build();
 
