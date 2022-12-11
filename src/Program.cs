@@ -1,3 +1,4 @@
+using educacional.Repository;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,10 @@ builder.Services.AddDbContext<CrmEducacionalContext>(options =>
                 Password=Password12!;
                 TrustServerCertificate=true;
             "));
+
+builder.Services.AddScoped<CandidatoRepository>();
+builder.Services.AddScoped<CursoRepository>();
+builder.Services.AddScoped<MatriculaRepository>();
 
 var app = builder.Build();
 
