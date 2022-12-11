@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace educacional.Migrations
 {
     [DbContext(typeof(CrmEducacionalContext))]
-    [Migration("20221211182705_init")]
+    [Migration("20221211205412_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -43,10 +43,6 @@ namespace educacional.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Telefone")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("CandidatoId");
 
                     b.ToTable("Candidatos");
@@ -59,10 +55,6 @@ namespace educacional.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CursoId"));
-
-                    b.Property<string>("CargaHoraria")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Categoria")
                         .IsRequired()
@@ -86,11 +78,11 @@ namespace educacional.Migrations
 
             modelBuilder.Entity("educacional.Models.Matricula", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("MatriculaId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MatriculaId"));
 
                     b.Property<int>("CandidatoId")
                         .HasColumnType("int");
@@ -98,7 +90,7 @@ namespace educacional.Migrations
                     b.Property<int>("CursoId")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("MatriculaId");
 
                     b.HasIndex("CandidatoId");
 

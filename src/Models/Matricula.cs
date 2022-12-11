@@ -6,7 +6,7 @@ namespace educacional.Models;
 public class Matricula
 {
     [Key]
-    public int Id { get; set; }
+    public int MatriculaId { get; set; }
     [ForeignKey("CursoId")]
     public int CursoId { get; set; }
     public Curso Curso { get; set; }

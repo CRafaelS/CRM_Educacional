@@ -18,7 +18,6 @@ namespace educacional.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Telefone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CPF = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
@@ -34,7 +33,6 @@ namespace educacional.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Descricao = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CargaHoraria = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Preco = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Categoria = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
@@ -47,14 +45,14 @@ namespace educacional.Migrations
                 name: "Matriculas",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    MatriculaId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CursoId = table.Column<int>(type: "int", nullable: false),
                     CandidatoId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Matriculas", x => x.Id);
+                    table.PrimaryKey("PK_Matriculas", x => x.MatriculaId);
                     table.ForeignKey(
                         name: "FK_Matriculas_Candidatos_CandidatoId",
                         column: x => x.CandidatoId,

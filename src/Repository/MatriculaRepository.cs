@@ -29,7 +29,6 @@ public class MatriculaRepository
 
         return new MatriculaDTO
         {
-            Id = novaMatricula.Id,
             CandidatoId = novaMatricula.CandidatoId,
             CursoId = novaMatricula.CursoId
         };

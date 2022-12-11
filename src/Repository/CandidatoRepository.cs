@@ -22,7 +22,6 @@ public class CandidatoRepository
             Nome = candidato.Nome,
             Email = candidato.Email,
             CPF = candidato.CPF,
-            Telefone = candidato.Telefone,
         };
     }
 

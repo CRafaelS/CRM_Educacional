@@ -21,7 +21,6 @@ public class CursoRepository
             CursoId = curso.CursoId,
             Nome = curso.Nome,
             Descricao = curso.Descricao,
-            CargaHoraria = curso.CargaHoraria,
             Preco = curso.Preco,
         };
     }

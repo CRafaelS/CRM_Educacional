@@ -8,23 +8,23 @@ namespace educacional.Controllers
     [Route("candidatos")]
     public class CandiatosController : Controller
     {
-        private readonly CandidatoRepository _crmEducacionalRepository;
+        private readonly CandidatoRepository _candidatoRepository;
 
-        public CandiatosController(CandidatoRepository crmEducacionalRepository)
+        public CandiatosController(CandidatoRepository candidatoRepository)
         {
-            _crmEducacionalRepository = crmEducacionalRepository;
+            _candidatoRepository = candidatoRepository;
         }
 
         [HttpPost]
         public IActionResult CriarCandidato([FromBody] Candidato candidato)
         {
-            return Created("", _crmEducacionalRepository.criarCandidato(candidato));
+            return Created("", _candidatoRepository.criarCandidato(candidato));
         }
 
         [HttpGet]
         public IActionResult CandidatosView()
         {
-            var candidatos = _crmEducacionalRepository.pegarCandidatos();
+            var candidatos = _candidatoRepository.pegarCandidatos();
             // ViewData["Title"] = "Candidatos";
             // IList<Candidato> candidatoList = _crmEducacionalRepository.pegarCandidatos().ToList().AsNoTracking();
             // ViewBag.candidatos = candidatoList;
