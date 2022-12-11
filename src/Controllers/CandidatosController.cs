@@ -5,25 +5,30 @@ using educacional.Repository;
 namespace educacional.Controllers
 {
     [ApiController]
-    [Route("Candidatos")]
+    [Route("candidatos")]
     public class CandiatosController : Controller
     {
         private readonly CandidatoRepository _crmEducacionalRepository;
 
-        [HttpPost("Cadastro")]
-        public IActionResult CriarCandidato(Candidato candidato)
+        public CandiatosController(CandidatoRepository crmEducacionalRepository)
         {
-            var novoCandidato = _crmEducacionalRepository.addCandidato(candidato);
-            return View(novoCandidato);
+            _crmEducacionalRepository = crmEducacionalRepository;
+        }
+
+        [HttpPost]
+        public IActionResult CriarCandidato([FromBody] Candidato candidato)
+        {
+            return Created("", _crmEducacionalRepository.criarCandidato(candidato));
         }
 
         [HttpGet]
         public IActionResult CandidatosView()
         {
-            ViewData["Title"] = "Candidatos";
-            IList<Candidato> candidatoList = _crmEducacionalRepository.pegarCandidatos().ToList();
-            ViewBag.candidato = candidatoList;
-            return View();
+            var candidatos = _crmEducacionalRepository.pegarCandidatos();
+            // ViewData["Title"] = "Candidatos";
+            // IList<Candidato> candidatoList = _crmEducacionalRepository.pegarCandidatos().ToList().AsNoTracking();
+            // ViewBag.candidatos = candidatoList;
+            return Ok(candidatos);
         }
     }
 
