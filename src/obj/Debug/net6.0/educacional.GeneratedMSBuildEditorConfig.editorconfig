@@ -23,8 +23,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NhbmRpZGF0b3NWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/c_rafael/CRM/CRM_Educacional/src/Views/Shared/CriarCandidatoView.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NyaWFyQ2FuZGlkYXRvVmlldy5jc2h0bWw=
+[/home/c_rafael/CRM/CRM_Educacional/src/Views/Shared/CriarCandidato.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NyaWFyQ2FuZGlkYXRvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/c_rafael/CRM/CRM_Educacional/src/Views/Shared/CursosView.cshtml]

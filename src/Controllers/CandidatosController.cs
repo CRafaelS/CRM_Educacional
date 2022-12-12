@@ -16,13 +16,12 @@ namespace educacional.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult CriarCandidato([Bind("Nome,Email,CPF")] Candidato candidato)
+        public IActionResult criarCandidato([FromBody] Candidato candidato)
         {
             if (ModelState.IsValid)
             {
                 _candidatoRepository.criarCandidato(candidato);
-                return RedirectToAction("CandidatosView");
+                return Ok("candidato");
             }
             return View(candidato);
         }
