@@ -20,5 +20,9 @@ public class CrmEducacionalContext : DbContext
             .HasOne(m => m.Curso)
             .WithMany(c => c.Matriculas)
             .HasForeignKey(m => m.CursoId);
+        
+        mb.Entity<Candidato>()
+            .HasIndex(c => c.CPF)
+            .IsUnique();
     }
 }

@@ -1,4 +1,5 @@
 using educacional.Models;
+using educacional.Validacao;
 
 namespace educacional.Repository;
 
@@ -13,6 +14,20 @@ public class CandidatoRepository
 
     public Candidato criarCandidato(Candidato candidato)
     {
+        var candidatoExistente = _context.Candidatos.FirstOrDefault(c => c.CPF == candidato.CPF);
+
+        if (candidatoExistente != null)
+        {
+            throw new Exception("CPF já cadastrado");
+        }
+        
+        bool isValidCPF = Validacao.ValidarCPF.ValidaCPF(candidato.CPF);
+
+        if (!isValidCPF)
+        {
+            throw new Exception("CPF inválido");
+        }
+
         _context.Candidatos.Add(candidato);
         _context.SaveChanges();
 

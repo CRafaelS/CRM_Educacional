@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace educacional.Migrations
 {
     [DbContext(typeof(CrmEducacionalContext))]
-    [Migration("20221211205412_init")]
+    [Migration("20221212125332_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -33,7 +33,7 @@ namespace educacional.Migrations
 
                     b.Property<string>("CPF")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -44,6 +44,9 @@ namespace educacional.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CandidatoId");
+
+                    b.HasIndex("CPF")
+                        .IsUnique();
 
                     b.ToTable("Candidatos");
                 });

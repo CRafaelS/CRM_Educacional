@@ -18,7 +18,7 @@ namespace educacional.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nome = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CPF = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    CPF = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -66,6 +66,12 @@ namespace educacional.Migrations
                         principalColumn: "CursoId",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Candidatos_CPF",
+                table: "Candidatos",
+                column: "CPF",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Matriculas_CandidatoId",

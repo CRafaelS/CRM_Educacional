@@ -30,7 +30,7 @@ namespace educacional.Migrations
 
                     b.Property<string>("CPF")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -41,6 +41,9 @@ namespace educacional.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CandidatoId");
+
+                    b.HasIndex("CPF")
+                        .IsUnique();
 
                     b.ToTable("Candidatos");
                 });
