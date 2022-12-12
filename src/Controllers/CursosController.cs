@@ -25,7 +25,8 @@ namespace educacional.Controllers
         public IActionResult CursosView()
         {
             var cursos = _cursoRepository.pegarCursos();
-            return Ok(cursos);
+            // return Ok(cursos);
+            return View();
         }
     }
     

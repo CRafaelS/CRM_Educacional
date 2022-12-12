@@ -19,8 +19,16 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/c_rafael/CRM/CRM_Educacional/src/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+[/home/c_rafael/CRM/CRM_Educacional/src/Views/Shared/CandidatosView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NhbmRpZGF0b3NWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/c_rafael/CRM/CRM_Educacional/src/Views/Shared/CriarCandidatoView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NyaWFyQ2FuZGlkYXRvVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/c_rafael/CRM/CRM_Educacional/src/Views/Shared/CursosView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0N1cnNvc1ZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/c_rafael/CRM/CRM_Educacional/src/Views/Shared/Error.cshtml]

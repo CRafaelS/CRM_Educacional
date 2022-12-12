@@ -16,9 +16,15 @@ namespace educacional.Controllers
         }
 
         [HttpPost]
-        public IActionResult CriarCandidato([FromBody] Candidato candidato)
+        [ValidateAntiForgeryToken]
+        public IActionResult CriarCandidato([Bind("Nome,Email,CPF")] Candidato candidato)
         {
-            return Created("", _candidatoRepository.criarCandidato(candidato));
+            if (ModelState.IsValid)
+            {
+                _candidatoRepository.criarCandidato(candidato);
+                return RedirectToAction("CandidatosView");
+            }
+            return View(candidato);
         }
 
         [HttpGet]
@@ -28,8 +34,7 @@ namespace educacional.Controllers
             // return Ok(candidatos);
 
             IList<Candidato> candidatos = _candidatoRepository.pegarCandidatos().ToList();
-            ViewBag.candidatos = candidatos;
-            return View();
+            return View(candidatos);
         }
     }
 
