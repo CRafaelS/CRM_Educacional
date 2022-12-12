@@ -16,6 +16,11 @@ public class MatriculaRepository
         var encontraCurso = _context.Cursos.Find(matricula.CursoId);
         var encontraCandidato = _context.Candidatos.Find(matricula.CandidatoId);
 
+        if (encontraCurso == null || encontraCandidato == null)
+        {
+            throw new Exception("Curso ou candidato não encontrado");
+        }
+
         var novaMatricula = new Matricula
         {
             Candidato = encontraCandidato!,
