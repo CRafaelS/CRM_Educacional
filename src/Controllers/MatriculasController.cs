@@ -20,5 +20,12 @@ namespace educacional.Controllers
         {
             return Created("", _matriculaRepository.criarMatricula(matricula));
         }
+
+        [HttpGet]
+        public IActionResult MatriculasView()
+        {
+            var matriculas = _matriculaRepository.pegarMatriculas();
+            return Ok(matriculas);
+        }
     }
 }

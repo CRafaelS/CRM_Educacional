@@ -38,4 +38,9 @@ public class MatriculaRepository
             CursoId = novaMatricula.CursoId
         };
     }
+
+    public List<Matricula> pegarMatriculas()
+    {
+        return _context.Matriculas.ToList();
+    }
 }

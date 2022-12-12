@@ -24,11 +24,12 @@ namespace educacional.Controllers
         [HttpGet]
         public IActionResult CandidatosView()
         {
-            var candidatos = _candidatoRepository.pegarCandidatos();
-            // ViewData["Title"] = "Candidatos";
-            // IList<Candidato> candidatoList = _crmEducacionalRepository.pegarCandidatos().ToList().AsNoTracking();
-            // ViewBag.candidatos = candidatoList;
-            return Ok(candidatos);
+            // var candidatos = _candidatoRepository.pegarCandidatos();
+            // return Ok(candidatos);
+
+            IList<Candidato> candidatos = _candidatoRepository.pegarCandidatos().ToList();
+            ViewBag.candidatos = candidatos;
+            return View();
         }
     }
 

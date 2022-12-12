@@ -21,6 +21,12 @@ namespace educacional.Controllers
         {
             return Created("", _cursoRepository.criarCurso(curso));
         }
+        [HttpGet]
+        public IActionResult CursosView()
+        {
+            var cursos = _cursoRepository.pegarCursos();
+            return Ok(cursos);
+        }
     }
     
 }

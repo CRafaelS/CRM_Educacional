@@ -24,4 +24,9 @@ public class CursoRepository
             Preco = curso.Preco,
         };
     }
+
+    public List<Curso> pegarCursos()
+    {
+        return _context.Cursos.ToList();
+    }
 }
