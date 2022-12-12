@@ -68,7 +68,7 @@ O objetivo deste projeto é criar um Web MVC para cadastrar candidatos, cursos e
       "CPF": "213.495.351-35",
     }
     ```
-  - Uma tabela chamada **Matricula**, contendo dados com a seguinte estrutura:
+  - Uma tabela chamada **Matrícula**, contendo dados com a seguinte estrutura:
 
     ```json
     {
@@ -104,12 +104,14 @@ O objetivo deste projeto é criar um Web MVC para cadastrar candidatos, cursos e
 ✨ **Atenção** As telas a seguir servem para ilustrar o funcionamento do projeto
 
 ## Home Page
-A tela inicial deste projeto serve para apresentar ele e podemos acessar ele cliando no nome educacional ou em CRM Educacional no rodapé da página. 
+A tela inicial deste projeto serve para apresentar ele e podemos acessar ele clicando no nome educacional ou em CRM Educacional no rodapé da página. 
+
+
 ![HomePage](./public/HomeCRM.png)
 
 ## Candidatos
 
-A pagina de candidatos deveria retornar todos candidatos e ter um link que redireciona para uma página de formulário de cadastro de novo candidato, porém este link ainda esta sendo implementado
+A página de candidatos deveria retornar todos candidatos e ter um link que redireciona para uma página de formulário de cadastro de novo candidato, porém este link ainda esta sendo implementado
 
 ![Candidatos](./public/Candidatos.png)
 
@@ -118,7 +120,7 @@ A pagina de candidatos deveria retornar todos candidatos e ter um link que redir
 O formulário de Cadastro tem os seguintes campos: Nome, Email e CPF. Todos os campos são de preenchimento obrigatório e deve ser fornecido um CPF válido, além disto é verificado se o CPF já não foi cadastrado.
 ![Cadastro](./public/Cadastro.png)
 
-A mesma ideai deveria se repetir o cadastro e visualização de cursos e para um candidato fazer a matricula em um curso. 
+A mesma ideia deveria se repetir para cadastrar e visualizar um novo curso, além disso, deve ser implementado a página de matrícula. 
 
 <details>
   <summary><strong> Mande seu feedback sobre o projeto!</strong></summary><br />
